@@ -66,3 +66,7 @@ echo '<br>';
 //method avec is_ retourne toujours true ou false 
 //exemple avec is_string
 echo is_string($a); //retourne 1 = true 
+
+//Day 2
+
+

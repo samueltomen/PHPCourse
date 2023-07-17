@@ -52,3 +52,25 @@ echo match (true) {
 
 //Opérateur ternaire 
 
+$age = 10;
+$isAllowed;
+
+// if ($age > 10) {
+//     $isAllowed =true;
+// }else{
+//     $isAllowed =false;
+// }
+
+// () ? () : ();
+
+// $isAllowed = $age > 10 ? true : false;
+// echo $isAllowed;
+
+echo '</br>';
+$a = null;
+$b = "hello";
+$c;
+
+//opérateur de fusion 
+$c = $a ?? $b ?? 'inconnue'; //Si $a vide , va chercher une valeur dans $b et un si de suite , se lit de gauche à droite 
+echo $c;

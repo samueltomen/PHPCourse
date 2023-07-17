@@ -44,3 +44,7 @@ echo '</br>';
 echo '</br>';
 
 //Verifications et formatage des nombres
+
+
+$formatage = 5485151546.5615415;
+echo number_format($formatage, 2, '.', ' ');

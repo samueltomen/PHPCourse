@@ -49,3 +49,6 @@ echo match (true) {
     $age > 10 => 'Welcome',
     default => "Back home"
 };
+
+//Opérateur ternaire 
+

@@ -74,3 +74,5 @@ $c;
 //opérateur de fusion 
 $c = $a ?? $b ?? 'inconnue'; //Si $a vide , va chercher une valeur dans $b et un si de suite , se lit de gauche à droite 
 echo $c;
+
+//les boucles for

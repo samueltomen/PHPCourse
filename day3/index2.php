@@ -12,5 +12,6 @@ echo '</br>';
 $b = 0.3;
 echo gettype($b);
 
+//Les opérateurs pour les nombres 
 
 

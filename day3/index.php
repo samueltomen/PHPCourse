@@ -76,3 +76,13 @@ $c = $a ?? $b ?? 'inconnue'; //Si $a vide , va chercher une valeur dans $b et un
 echo $c;
 
 //les boucles for
+echo "</br>";
+for ($i=0; $i < 3 ; $i++) { 
+    echo '<br>';
+    if ($i === 1) {
+        continue;
+    }
+    echo $i;
+};
+
+echo '</br> Out of the loop';

@@ -42,3 +42,5 @@ echo '</br>';
 echo '</br>';
 echo '</br>';
 echo '</br>';
+
+//Verifications et formatage des nombres

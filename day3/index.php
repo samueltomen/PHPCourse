@@ -77,14 +77,26 @@ echo $c;
 
 //les boucles for
 echo "</br>";
-for ($i=0; $i < 3 ; $i++) { 
+for ($i = 0; $i < 3; $i++) {
     echo '<br>';
     if ($i === 1) {
         continue;
     }
     echo $i;
-};
+}
+;
 
 echo '</br> Out of the loop';
 
 //Les boucles whiles
+echo '</br>';
+$i = 0;
+do{
+    echo $i;
+    $i++;
+}while ($i < 10);
+
+while ($i <= 10) {
+    echo $i;
+    $i++;
+}

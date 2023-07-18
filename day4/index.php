@@ -76,8 +76,24 @@ echo "J'ai mangé " . $a + $b . " bonbons";
 
 // Installation du module mbstring
 echo "<h1>Installation du module mbstring</h1>";
+// Ce module permet d'eviter les erreur pour les caractères qui sont encodé sur 2 octets car php encode un caractère sur 1 octets par default
+echo strlen('salut'); //5
+echo "</br>";
+echo strlen('été'); //5 au lieu de 3
+echo "</br>";
+echo mb_strlen("été"); //mb_strlen permet d'obtenir la longueur de la chaine de caractères réel
 
-echo "</br>";
-echo "</br>";
+//installation sur ubuntu 
+/* 
+sudo apt install php-mbstring 
+php -m -> affiche tous les modules installé 
+*/
+
+// Les fonctions globales pour les chaînes de caractères
+
+echo "<h1>Les fonctions globales pour les chaînes de caractères</h1>";
+
+
+
 echo "</br>";
 echo "</br>";

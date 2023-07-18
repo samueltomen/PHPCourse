@@ -57,3 +57,27 @@ echo $c;
 
 echo "<h1>Les opérateurs pour les chaînes de caractères</h1>";
 
+$a = "je suis une chaine de";
+
+$b = "caractères";
+
+echo "$a $b";
+echo "</br>";
+echo $a . " " . $b; //Concatenation
+
+//autre exemple 
+
+$a = 1;
+$b = 3;
+
+echo "</br>";
+echo "J'ai mangé " . $a + $b . " bonbons";
+
+
+// Installation du module mbstring
+echo "<h1>Installation du module mbstring</h1>";
+
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";

@@ -18,3 +18,8 @@ echo "</br>";
 echo pi();//Permet de recuperer la valeur de pi
 echo "</br>";
 echo mt_rand(1,20);//Genere un nombre aleatoire en 0 & 20
+
+//Introduction aux chaînes de caractères
+
+echo "<h1>Introduction aux chaînes de caractères</h1>";
+

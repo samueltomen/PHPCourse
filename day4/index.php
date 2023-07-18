@@ -115,4 +115,17 @@ echo str_replace("été", "hiver", $a); //Remplace une chaine de caractère par 
 echo "</br>";
 print_r(explode(" ", $a)); //Transforme chaine de caractère en tableau
 echo "</br>";
-echo implode(" ", explode(" ", $a));// Inverse de la methode explode . Transforme un tableau en chaine de caractères 
+echo implode(" ", explode(" ", $a)); // Inverse de la methode explode . Transforme un tableau en chaine de caractères 
+
+// Les expressions rationnelles
+echo "<h1>Les expressions rationnelles</h1>";
+
+$a = "je suis un homme";
+$pattern = "/s[ui]*2/";
+
+// Recherche une correspondance avec l'expression régulière dans la chaîne $a et affiche le résultat (1 si une correspondance est trouvée, 0 sinon)
+echo preg_match($pattern, $a);
+
+// preg_match_all();
+// preg_replace();
+

@@ -90,10 +90,29 @@ php -m -> affiche tous les modules installé
 */
 
 // Les fonctions globales pour les chaînes de caractères
+//Toute ces methodes retourne automatiquement une nouvelle chaine de caractères et ne modifie pas la chaine de caractère initiale
 
 echo "<h1>Les fonctions globales pour les chaînes de caractères</h1>";
 
-
-
+$a = "Il fait beau en été";
+echo mb_strlen($a); //Vu lecon précedente 
 echo "</br>";
+echo mb_strtolower($a); //Met la chaîne de caractère en minuscules
 echo "</br>";
+echo mb_strtoupper($a); //Tout en majuscule
+echo "</br>";
+echo trim("        $a        "); //Enlève tous les espace
+echo "</br>";
+echo str_contains($a, "été"); //Recherche une chaine de caractère précise passé en paramètre retiurne true or false
+echo "</br>";
+str_starts_with($a, "il"); //Permet de savoir si une chaine de caractères commence par | retourne true or fasle
+echo "</br>";
+str_ends_with($a, "il"); //Permet de savoir si une chaine de caractères fini par retourne true or fasle 
+echo "</br>";
+echo mb_substr($a, 0, 7); //Coupe la chaine de caractère entre les numero donné. Ici de 0 à 7 caractères.
+echo "</br>";
+echo str_replace("été", "hiver", $a); //Remplace une chaine de caractère par une autre
+echo "</br>";
+print_r(explode(" ", $a)); //Transforme chaine de caractère en tableau
+echo "</br>";
+echo implode(" ", explode(" ", $a));// Inverse de la methode explode . Transforme un tableau en chaine de caractères 

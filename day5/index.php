@@ -75,3 +75,23 @@ function func4()
 
 func4();
 
+// Les fonctions anonymes
+echo "<h1>Les fonctions anonymes</h1>";
+/* 
+La fonction test est définie avec un paramètre $callback. Cette fonction prend une fonction de rappel en argument.
+
+À l'intérieur de la fonction test, la variable $callback est appelée comme une fonction en utilisant les parenthèses (). Cela exécute la fonction de rappel passée en argument.
+
+L'appel de test est effectué en passant une fonction anonyme comme argument. Cette fonction anonyme est définie à l'intérieur de l'appel de test et ne possède pas de nom. Elle affiche simplement le texte "Hello in comeback".
+
+Lorsque test est appelée, la fonction de rappel passée en argument est exécutée. Dans ce cas, la fonction anonyme est appelée et affiche "Hello in comeback".
+*/
+
+function test($callback)
+{
+    $callback(); // Appelle la fonction de rappel passée en argument
+}
+
+test(function () {
+    echo "Hello in comeback"; // Fonction de rappel qui affiche "Hello in comeback"
+});

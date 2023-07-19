@@ -23,14 +23,55 @@ function func2($a, $b = 2) //le fait de mettre un "=" à $b permet de mettre une
     return $a + $b;
 }
 
-$c = func2(1,1);
+$c = func2(1, 1);
 echo $c;
 
 echo "</br>";
 
-function greeting($firstName, $lastName){
+function greeting($firstName, $lastName)
+{
     echo "Bonjour $firstName $lastName";
 }
 greeting("Jean", lastName: "Valjean");
 
+
+// Nombre indéfini d'arguments
+echo "<h1>Nombre indéfini d'arguments</h1>";
+
+function my_min(...$rest)
+{
+    $a = func_get_args(); // Récupère tous les arguments passés à la fonction dans un tableau $a
+    $firstArg = func_get_arg(0); // Récupère le premier argument passé à la fonction et le stocke dans $firstArg
+    $num = func_num_args(); // Récupère le nombre total d'arguments passés à la fonction et le stocke dans $num
+    echo "</br>";
+}
+
+my_min(10, 2, 3); // Appelle la fonction my_min avec les arguments 10, 2 et 3
+
+function my_sread(...$arr)
+{
+    return min(...$arr); // Utilise l'opérateur de décomposition (...) pour passer tous les arguments à la fonction min() et renvoie la valeur minimale
+}
+echo my_sread(1, 2, 3, 4, 5, 6); // Appelle la fonction my_sread avec les arguments 1, 2, 3, 4, 5 et 6, puis affiche la valeur minimale renvoyée
+
+// Portée des variables
+echo "<h1>Portée des variables</h1>";
+
+$b = 2;
+
+function func3()
+{
+    global $b; // Permet d'accéder à la variable globale $b à l'intérieur de la fonction
+    echo $b;
+}
+
+func3();
+function func4()
+{
+    static $num = 0; // Déclare une variable statique $num avec la valeur 0
+    echo $num; // Affiche la valeur de $num
+    $num++; // Incrémente la valeur de $num
+}
+
+func4();
 

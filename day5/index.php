@@ -95,3 +95,9 @@ function test($callback)
 test(function () {
     echo "Hello in comeback"; // Fonction de rappel qui affiche "Hello in comeback"
 });
+
+
+// Les fonctions fléchées
+echo "<h1>Les fonctions fléchées</h1>";
+
+

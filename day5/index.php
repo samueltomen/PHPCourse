@@ -100,4 +100,53 @@ test(function () {
 // Les fonctions fléchées
 echo "<h1>Les fonctions fléchées</h1>";
 
+$p1 = 5;
+$p2 = 7;
 
+function calculator($p1, $p2, $operator)
+{
+    return $operator($p1, $p2); // Appelle la fonction $operator avec les arguments $p1 et $p2 et renvoie le résultat
+}
+
+$addition = fn($p1, $p2) => $p1 + $p2; // Définit une fonction fléchée (arrow function) $addition qui retourne la somme de $p1 et $p2
+
+echo calculator($p1, $p2, $addition); // Appelle la fonction calculator en passant les arguments $p1, $p2 et $addition, puis affiche le résultat
+
+
+// Typer les fonctions
+echo "<h1>Typer les fonctions</h1>";
+
+declare(strict_types=1); // Déclare le mode strict des types pour le reste du script
+
+function add(int $p1, int $p2): int
+{
+    return $p1 + $p2; // Ajoute les deux paramètres de type int et retourne un entier (int)
+}
+
+function greeting2(string $name): void
+{
+    echo $name; // Affiche le nom passé en paramètre de type string
+}
+
+function greeting3(?string $name): void
+{
+    echo $name ? "Bonjour $name" : "Bonjour"; // Affiche "Bonjour $name" si le nom est non null, sinon affiche simplement "Bonjour"
+}
+
+// Les annotations "void" et "?" permettent de spécifier le type de retour et d'indiquer la possibilité d'une valeur null pour les paramètres respectivement.
+
+
+greeting3(null); // Appelle la fonction greeting3 avec la valeur null
+
+function add_2(int|float $p3, int|float $p4): mixed
+{
+    return $p3 + $p4; // Ajoute les deux paramètres de types int ou float et retourne un type mixte (mixed)
+}
+
+add_2(1, 2); // Appelle la fonction add_2 avec les valeurs 1 et 2
+
+add("un", 2); //Erreur  
+// Appelle la fonction add avec une valeur de type string et une valeur de type int !
+
+greeting2(2); //Erreur  
+// Appelle la fonction greeting2 avec une valeur de type int

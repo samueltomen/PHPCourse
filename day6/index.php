@@ -147,3 +147,47 @@ print_r($arr);
 // Supprimer des éléments d'un tableau et assigner depuis un tableau
 echo "<h1>Supprimer des éléments d'un tableau et assigner depuis un tableau</h1>";
 
+// Methode 1.
+$arr = [1, 2];
+print_r($arr); // Affiche le tableau complet [1, 2]
+
+unset($arr[0]); // Supprime la valeur 1 du tableau
+print_r($arr); // Affiche le tableau [2] car l'index 0 a été supprimé
+
+// Methode 2
+$arr = [1, 2, 3];
+
+array_pop($arr); // Supprime la dernière valeur du tableau
+print_r($arr); // Affiche le tableau [1, 2] car la valeur 3 a été supprimée
+
+// Methode 3
+echo "Methode 3";
+echo "</br>";
+$arr = [1, 2, 3, 4, 5];
+
+list($a, , $b) = $arr; // Assignation des valeurs 1 et 3 aux variables $a et $b, en ignorant la deuxième valeur
+echo "</br>";
+print_r($arr);
+echo $a; // Affiche la valeur de $a, qui est 1
+
+// Methode 4
+echo "</br>";
+echo "Methode 4";
+echo "</br>";
+$arr = [1, 2, 3, 4];
+array_shift($arr); // Supprime la première valeur du tableau
+print_r($arr); // Affiche le tableau [2, 3, 4] car la valeur 1 a été supprimée
+
+// Methode 5
+echo "</br>"; // Affiche une balise HTML de saut de ligne
+echo "Methode 5"; // Affiche le texte "Methode 5"
+echo "</br>"; // Affiche une balise HTML de saut de ligne
+$arr = [1, 2, 3, 4, 5, 6];
+
+array_splice($arr, 1, 2); // Supprime 2 éléments à partir de l'index 1 dans le tableau $arr
+print_r($arr); // Affiche le contenu modifié du tableau [1, 4, 5, 6]
+
+$arr5 = [1, 2, 3, 4, 5, 6];
+
+array_splice($arr5, 1, 1, 10); // Supprime 1 éléments à partir de l'index 1 dans le tableau $arr et remplace par la valeur 10
+var_dump($arr5); // Affiche le contenu modifié du tableau [1, 10, 3, 4, 5, 6]

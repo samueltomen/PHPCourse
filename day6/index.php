@@ -146,3 +146,4 @@ print_r($arr);
 
 // Supprimer des éléments d'un tableau et assigner depuis un tableau
 echo "<h1>Supprimer des éléments d'un tableau et assigner depuis un tableau</h1>";
+

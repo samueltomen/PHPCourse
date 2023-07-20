@@ -18,3 +18,7 @@ echo "<pre>";
 
 // Accéder aux valeurs d'un tableau
 echo "<h1>Accéder aux valeurs d'un tableau</h1>";
+
+echo $d[0][1];//2
+echo "</br>";
+echo count($d); // Permet de connaitre le nombre d'element dans un tableau ou un objet

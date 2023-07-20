@@ -15,3 +15,6 @@ print_r($b);
 print_r($d);
 
 echo "<pre>";
+
+// Accéder aux valeurs d'un tableau
+echo "<h1>Accéder aux valeurs d'un tableau</h1>";

@@ -141,3 +141,8 @@ print_r($arr5);
 // Initialisation d'un tableau avec des valeurs 
 $arr = array_fill(0, 50, 0); //Tableau de 50 élements à partir de l'index 0, avec la valeur 0
 print_r($arr);
+
+
+
+// Supprimer des éléments d'un tableau et assigner depuis un tableau
+echo "<h1>Supprimer des éléments d'un tableau et assigner depuis un tableau</h1>";

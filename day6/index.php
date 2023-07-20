@@ -25,3 +25,21 @@ echo count($d); // Permet de connaitre le nombre d'element dans un tableau ou un
 
 // Les opérateurs pour les tableaux
 echo "<h1>Les opérateurs pour les tableaux</h1>";
+
+// $a = [1,2,3];
+// $b = [4,5,6];
+
+// print_r($a +$b);//Recuperer les valeur du tableau a gauche du signe "+" , si il y a le même index a droite
+
+//spread operator
+//Ne marche pas avec des tableau qui ont des chaines de caractères en index
+$a = [1];
+$b = [2,3,4,5,6];
+
+print_r([...$a,...$b]); //Eclatage du tableau et repandaison des valeurs
+
+function test($a, $b, ...$rest){
+    return $rest;
+}
+
+print_r(test(...$b));

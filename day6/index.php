@@ -99,3 +99,7 @@ function func2(array &$arr): void
 func2($c); //Modification de la valeur de la variable $c car assignation par adresse dans le parametre de la fonction
 print_r($c);
 
+// Ajouter des éléments à un tableau et fusionner des tableaux
+echo "<h1>Ajouter des éléments à un tableau et fusionner des tableaux</h1>";
+
+

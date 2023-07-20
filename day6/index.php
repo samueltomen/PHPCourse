@@ -24,4 +24,4 @@ echo "</br>";
 echo count($d); // Permet de connaitre le nombre d'element dans un tableau ou un objet
 
 // Les opérateurs pour les tableaux
-echo "<h1>Accéder aux valeurs d'un tableau</h1>";
+echo "<h1>Les opérateurs pour les tableaux</h1>";

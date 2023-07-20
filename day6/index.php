@@ -102,4 +102,42 @@ print_r($c);
 // Ajouter des éléments à un tableau et fusionner des tableaux
 echo "<h1>Ajouter des éléments à un tableau et fusionner des tableaux</h1>";
 
+//Ajouter un nombre à la fin du tableau
 
+// Methode 1.
+$arr = [1];
+$arr[] = 2;
+print_r($arr);
+
+// Methode 2.
+$arr = [...$arr, 3];
+print_r($arr);
+
+// Methode 3.
+array_push($arr, 4, 5);
+print_r($arr);
+
+// Ajouter un nombre au debut du tableau
+
+// Methode 1.
+array_unshift($arr, 0); //Ne creer pas de nouveau tableau
+print_r($arr);
+
+// Methode 2.
+$arr = [-1, ...$arr]; //Creer un nouveau tableau
+print_r($arr);
+
+//Associer des tableaux entre eux avec la methode merge 
+$arr2 = ['a', 'b', 'c'];
+$arr3 = array_merge($arr, $arr2);
+print_r($arr3);
+
+// Marche aussi avec les tableaux associatif 
+// Exemple
+$arr4 = ['a' => 'a', 'b' => 'b', 'c' => 'c'];
+$arr5 = array_merge($arr3, $arr4);
+print_r($arr5);
+
+// Initialisation d'un tableau avec des valeurs 
+$arr = array_fill(0, 50, 0); //Tableau de 50 élements à partir de l'index 0, avec la valeur 0
+print_r($arr);

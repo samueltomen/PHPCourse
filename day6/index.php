@@ -43,3 +43,9 @@ function test($a, $b, ...$rest){
 }
 
 print_r(test(...$b));
+
+// Référence et valeur
+echo "<h1>Référence et valeur</h1>";
+
+
+

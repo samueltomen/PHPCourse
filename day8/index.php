@@ -75,7 +75,15 @@ foreach ($arr as &$value) {
     // ce qui permet de modifier directement la valeur de chaque élément sans faire de copie.
     // Cela signifie que les valeurs du tableau $arr seront modifiées après la boucle.
 }
-
 print_r($arr);
+
+echo "</pre>";
+
+// Comparer des tableaux
+echo "<h1>Comparer des tableaux</h1>";
+
+echo "<pre>";
+
+
 
 echo "</pre>";

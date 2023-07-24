@@ -84,6 +84,19 @@ echo "<h1>Comparer des tableaux</h1>";
 
 echo "<pre>";
 
+$a = [4, 2, 6];
+$b = [4, 5, 6];
 
+$c = array_diff($a, $b);
+// Renvoie un tableau des valeurs de $a qui ne sont pas présentes dans $b.
+
+$c = array_intersect($a, $b);
+// Renvoie un tableau des valeurs communes entre $a et $b.
+
+print_r($c);
 
 echo "</pre>";
+
+echo "<h1>Comparer des tableaux</h1>";
+
+

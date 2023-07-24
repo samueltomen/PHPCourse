@@ -97,6 +97,7 @@ print_r($c);
 
 echo "</pre>";
 
-echo "<h1>Comparer des tableaux</h1>";
+// Tableau et programmation fonctionnelle
+echo "<h1>Tableau et programmation fonctionnelle</h1>";
 
 

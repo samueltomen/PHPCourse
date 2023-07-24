@@ -100,4 +100,56 @@ echo "</pre>";
 // Tableau et programmation fonctionnelle
 echo "<h1>Tableau et programmation fonctionnelle</h1>";
 
+echo "<pre>";
 
+$arr = [1, 2, 3];
+$arr2 = ['a', 'b', 'c'];
+
+// Fonction array_map
+$arr3 = array_map(fn($a) => ++$a, $arr, $arr2);
+
+$arr3 = array_map(fn($a) => strtoupper($a), $arr2);
+
+// $arr4 = array_map(function ($a, $b) {
+//     echo "$a \n";
+//     echo "$b \n";
+//     return 1;
+// }, $arr, $arr2);
+print_r($arr);
+print_r($arr3);
+
+// Fonction array_filter
+$arr5 = [1, 2, 3, 4, 5];
+$arr6 = array_filter($arr5, fn($a) => $a !== 3);
+
+print_r($arr5);
+print_r($arr6);
+
+$panier = [
+    [
+        'prix' => 50,
+        'title' => 'shoes'
+    ],
+    [
+
+        'prix' => 70,
+        'title' => 'jacket'
+    ],
+    [
+        'prix' => 25000,
+        'title' => 'ds3'
+    ]
+];
+
+$count = array_reduce($panier, function ($acc, $article) {
+    $acc += $article['prix'];
+    echo "$acc \n";
+    return $acc;
+}, 0);
+
+echo "</br>";
+echo $count;
+
+
+
+echo "</pre>";

@@ -49,4 +49,33 @@ echo "<h1>Parcourir un tableau</h1>";
 
 echo "<pre>";
 
+$arr = [1, 2, 3];
+$arr3 = [[1, 2], [3, 4]];
+
+// Boucle foreach pour le tableau $arr
+foreach ($arr as $key => $value) {
+    echo "key : $key \n"; // Affiche l'indice de l'élément en cours d'itération
+    echo "value : $value \n"; // Affiche la valeur de l'élément en cours d'itération
+}
+
+echo "<br>";
+
+// Boucle foreach avec "list" pour le tableau $arr3
+foreach ($arr3 as list($a, $b)) {
+    echo "$a \n"; // Affiche le premier élément du sous-tableau en cours d'itération
+    echo "$b \n"; // Affiche le deuxième élément du sous-tableau en cours d'itération
+}
+
+echo "<br>";
+
+// Boucle foreach avec référence pour le tableau $arr
+foreach ($arr as &$value) {
+    $value++; // Incrémente la valeur de chaque élément du tableau $arr
+    // Note : L'utilisation du signe "&" permet de créer une référence à chaque élément du tableau,
+    // ce qui permet de modifier directement la valeur de chaque élément sans faire de copie.
+    // Cela signifie que les valeurs du tableau $arr seront modifiées après la boucle.
+}
+
+print_r($arr);
+
 echo "</pre>";

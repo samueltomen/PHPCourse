@@ -39,3 +39,11 @@ echo require './lib.php';
 // echo $a;
 
 
+// ------- Différences entre require, require_once, include, include_once -------
+// require: Inclut un fichier spécifié, et arrête l'exécution avec une erreur fatale si le fichier est introuvable ou génère une erreur.
+// require_once: (Utilisé par defaut) Inclut un fichier spécifié une seule fois dans le script, évitant les doublons lors des inclusions multiples.
+// include: Inclut un fichier spécifié, et émet une alerte si le fichier est introuvable ou génère une erreur, mais le script continue.
+// include_once: Inclut un fichier spécifié une seule fois dans le script, évitant les doublons, et continue l'exécution malgré les erreurs.
+
+
+//"Require" continue le script même en cas d'erreur , à la difference de "include" qui lui arrête le script

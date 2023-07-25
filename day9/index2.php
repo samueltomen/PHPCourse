@@ -17,3 +17,8 @@ test();
 
 // Require et chemins
 echo "<h1>Require et chemins</h1>";
+
+require '/Users/tomen/OneDrive/Documents/GitHub/PHPCourse/day9/lib.php';
+
+funcLib();
+echo $a;

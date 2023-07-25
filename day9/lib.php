@@ -7,4 +7,6 @@ function funcLib()
 
 }
 
+return 5;
+
 ?>

@@ -24,14 +24,18 @@ test();
 // Require et chemins
 echo "<h1>Require et chemins</h1>";
 
+echo require './lib.php';
+
 // Les lignes suivantes sont en commentaires pour éviter l'inclusion du fichier lib.php plusieurs fois.
 
 // require '/Users/tomen/OneDrive/Documents/GitHub/PHPCourse/day9/lib.php';
 // require __DIR__ . 'lib.php';
-require './lib.php';
+// require './lib.php';
 
 // Utilisation de la fonction funcLib() du fichier lib.php après son inclusion.
-funcLib();
+// funcLib();
 
 // Affichage de la valeur de la variable $a définie dans le fichier lib.php (si elle est définie).
-echo $a;
+// echo $a;
+
+

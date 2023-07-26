@@ -3,12 +3,19 @@
     "trailingComma": "all",
     "singleQuote": true,
     "printWidth": 80,
-    "tabWidth": 2,
+    "tabWidth": ,
     "overrides": [
         {
             "files": "*.php",
             "options": {
-                "tabWidth": 
+                "tabWidth": 4
+            }
+        },
+        
+        {
+            "files": "*.html",
+            "options": {
+                "tabWidth": 4
             }
         }
     ]

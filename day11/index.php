@@ -8,12 +8,25 @@
 // filter_var();
 // filter_var_array();
 
+$text = "<script>console.log('hello')</script>";
+echo $text; // Affiche la chaîne de texte avec des balises HTML.
+
+echo filter_var($text, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+// Affiche la chaîne de texte avec les balises HTML et les caractères spéciaux filtrés.
+
+echo "</br>";
+
+$email = "jeantoto(du22)@-toto.fr";
+echo filter_var($email, FILTER_SANITIZE_EMAIL);
+// Affiche l'adresse email filtrée, en supprimant les caractères non valides.
+
+echo "</br>";
+
+$number = "1,145.5";
+echo filter_var($number, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION | FILTER_FLAG_ALLOW_THOUSAND);
+// Affiche le nombre filtré, autorisant les fractions et les séparateurs de milliers. | pour mettre plusieurs flag , chaque flag est relier à un filtre
 
 
-
-if (isset($_POST['firstname'])) {
-    $firstname = $_POST['firstname'];
-}
 ?>
 </pre>
 <h1>Bonjour <?= isset($firstname) ? $firstname : '!' ?></h1>

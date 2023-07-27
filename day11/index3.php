@@ -14,3 +14,7 @@ var_dump(is_file($filename));
 echo "<br>";
 var_dump(is_dir($dossier));
 echo "<br>";
+
+
+// Lire et écrire dans un fichier
+echo "<h1>Lire et écrire dans un fichier</h1>";

@@ -42,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <form action="index2.php" method="POST">
     <div>
         <label for="firstname">firstname</label><br>
-        <input type="text" name="firstname" id="firstname">
+        <input type="text" name="firstname" id="firstname" value=<?= isset($firstname) ? "$firstname" : "" ?>>
         <?= $errors['firstname'] ? '<p style="color:red">' . $errors['firstname'] . "</p>" : '' ?>
     </div>
     <br>
     <div>
         <label for="email">email</label><br>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" value=<?= isset($email) ? "$email" : "" ?>>
         <?= $errors['email'] ? '<p style="color:red">' . $errors['email'] . "</p>" : '' ?>
 
     </div>

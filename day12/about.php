@@ -1,4 +1,5 @@
 <?php
+// UTILISATION DES COOKIE EN PHP
 
 setcookie('about', 'I am in about', httponly: true);
 // Définit un cookie nommé 'about' avec la valeur 'I am in about'. 
@@ -14,3 +15,23 @@ setcookie('about', 'I am in about', httponly: true);
 
 <a href="/">Index</a>
 <!-- Un lien vers la page d'accueil (index.php). Lorsque cliqué, cela ouvrira la page index.php dans le navigateur. -->
+
+
+<!-- UTILISATION DES SESSIONS -->
+
+<pre>
+<?php
+
+session_start([
+    'save_path' => __DIR__ . "/sessions",
+    'cookie_lifetime' => 500
+]);
+// print_r($_SESSION);
+
+$_SESSION['name'] = 'Jean';
+
+
+?>
+</pre>
+
+<h1><?= $_SESSION['name'] ?></h1>

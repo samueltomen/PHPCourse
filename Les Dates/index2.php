@@ -15,6 +15,26 @@
 
     echo $formateurArabe->format($time); // Affiche la date et l'heure formatées en utilisant le formateur en arabe marocain.
 
+    // L'objet DateTime
+    $datetime = new DateTime('21-02-15 15:01:05');
+    print_r($datetime);
+
+    echo $datetime->format('d/m/Y à G:i:s');
+    $datetime2 = new DateTime('21-02-16 12:01:05');
+
+    echo "<br>";
+
+    $diff = $datetime->diff($datetime2, true);
+    print_r($diff);
+
+    echo "<br>";
+
+    echo $diff->format('%H heures');
+    echo "<br>";
+
+    $datetime3 = new DateTime('now', new DateTimeZone('Europe/Paris'));
+    echo $datetime3->format('d/m/Y à G:i:s');
+
 
     ?>
 </pre>

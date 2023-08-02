@@ -5,8 +5,8 @@
 
     date_default_timezone_set('Europe/Paris');
     // Définit le fuseau horaire par défaut à 'Europe/Paris'. À partir de maintenant, toutes les opérations liées à la date et à l'heure seront effectuées dans ce fuseau horaire.
-    
-    
+
+
     // Exemple 1
     $time = time();
     // Récupère le timestamp actuel (temps écoulé depuis le 1er janvier 1970, en secondes) et le stocke dans la variable $time.

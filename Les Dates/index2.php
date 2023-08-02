@@ -36,5 +36,8 @@
     echo $datetime3->format('d/m/Y à G:i:s');
 
 
+    // Récupérer la date depuis un formulaire
+    echo "<h2>Récupérer la date depuis un formulaire</h2>"
+
     ?>
 </pre>

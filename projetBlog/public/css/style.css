@@ -2,6 +2,7 @@
 :root {
     --font-family: "Open Sans", "sans-serif";
     --primary: #e74c3c;
+    --primary-dark: #c0392b;
     --dark: #2c3e50;
     --danger: #e74c3c;
     --background-light: #ecf0f1;
@@ -36,6 +37,10 @@ h1 {
 ul {
     padding: 0;
     list-style-type: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* container */
@@ -96,7 +101,30 @@ header {
     background-color: var(--primary);
     padding: 1.5rem;
     box-shadow: var(--box-shadow);
+    color: var(--text-color-light);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.active {
+    background-color: var(--primary-dark);
+}
+
+.header-menu {
+    margin: 0;
+}
+.header-menu li {
+    border-radius: 3px;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+.header-menu li:hover {
+    background-color: var(--primary-dark);
+}
+
 .logo {
     font-weight: 700;
     font-size: 2rem;

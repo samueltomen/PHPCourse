@@ -57,7 +57,7 @@ a {
 
 /* text */
 
-.text-danger {
+.text-error {
     color: var(--danger);
     font-size: 1.2rem;
     font-weight: bold;
@@ -134,11 +134,14 @@ header {
 /* Content */
 
 .content {
+    max-width: 100rem;
+    width: 100%;
     flex: 1;
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+    flex-flow: column;
+    align-self: center;
     align-items: center;
+    padding: 2rem 0;
 }
 
 /* Footer */
@@ -149,4 +152,21 @@ footer {
     flex-flow: row-reverse;
     color: var(--text-color-light);
     padding: 1.5rem;
+}
+
+.block {
+    border-radius: 3px;
+    border: var(--border);
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/* utils */
+
+.p-20 {
+    padding: 2rem;
+}
+
+.p-10 {
+    padding: 1rem;
 }

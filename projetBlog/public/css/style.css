@@ -53,6 +53,10 @@ a {
     color: var(--text-color);
 }
 
+.overflow {
+    overflow: hidden;
+}
+
 /* bouton */
 
 /* text */

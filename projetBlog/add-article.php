@@ -123,9 +123,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-control">
                         <label for="category">Catégorie</label>
                         <select type="select" name="category" id="category">
-                            <option value="technology">Technologie</option>
-                            <option value="nature">Nature</option>
-                            <option value="politic">Politique</option>
+                            <option value="Technologie">Technologie</option>
+                            <option value="Nature">Nature</option>
+                            <option value="Politique">Politique</option>
                         </select>
                         <?php if ($errors['category']) : ?>
                             <p class="text-error"><?= $errors['category'] ?></p>

@@ -15,7 +15,7 @@
     transform: scale(1.2);
 }
 
-.category-container h2 {
+.newsfeed-content h2 {
     font-size: 2rem;
     padding: 0 1rem;
 }
@@ -28,4 +28,25 @@
     height: 30rem;
     background-size: cover;
     transition: transform 0.4s;
+}
+.newsfeed-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.category-container {
+    flex: 20rem;
+}
+
+.category-container li {
+    margin: 1rem 0;
+    transition: color 0.3s;
+}
+
+.category-container li:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+.cat-active {
+    color: var(--primary);
+    font-weight: bold;
 }

@@ -1,0 +1,28 @@
+.article-cover-img {
+    height: 50rem;
+    background-size: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.article-title {
+    margin: 3rem 0;
+    text-align: left;
+    font-size: 5rem;
+    font-weight: 400;
+}
+.article-content {
+    white-space: pre-wrap;
+}
+.article-container {
+    padding-bottom: 10rem;
+}
+
+.article-back {
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: block;
+}

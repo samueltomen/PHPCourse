@@ -11,7 +11,7 @@ class User
     }
 }
 
-$user = new User();
+// $user = new User();
 
 echo $user->name;
 echo '<br>';

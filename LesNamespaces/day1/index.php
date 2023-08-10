@@ -12,6 +12,7 @@ use Dyma\models\User as DymaUser;
 // Vous pouvez également utiliser cette syntaxe pour importer des constantes depuis un namespace.
 use function Dyma\models\{func, func2};
 use const Dyma\models\TEST;
+use const Dyma\const\GLOB;
 
 // Inclut les fichiers PHP nécessaires.
 require __DIR__ . "/lib/models/User.php";
@@ -38,6 +39,9 @@ echo TEST;
 
 // Crée une nouvelle instance de la classe "Email" depuis le namespace "Dyma\models".
 $email = new Email();
+
+echo GLOB;
+
 
 // Le code commenté ci-dessous montre comment étendre directement une classe depuis un namespace sans utiliser la directive "use".
 // class User extends Dyma\User

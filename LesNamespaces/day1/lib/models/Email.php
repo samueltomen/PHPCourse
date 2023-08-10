@@ -1,14 +1,21 @@
 <?php
 
-namespace Dyma\models;
+namespace Dyma\models {
 
-class Email
-{
 
-    function __construct()
+    class Email
     {
-        echo "lib Email construc";
+
+        function __construct()
+        {
+            echo "lib Email construc";
+        }
     }
 }
 
-echo __NAMESPACE__;//Permet de savoir dans quel namespace on se situe 
+// echo __NAMESPACE__;//Permet de savoir dans quel namespace on se situe 
+
+
+namespace Dyma\const {
+    const GLOB = 'TEST';
+}

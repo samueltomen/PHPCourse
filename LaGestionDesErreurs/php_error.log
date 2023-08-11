@@ -1,0 +1,14 @@
+[11-Aug-2023 10:45:53 UTC] PHP Warning:  Undefined variable $var in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php on line 19
+[11-Aug-2023 10:45:53 UTC] PHP Stack trace:
+[11-Aug-2023 10:45:53 UTC] PHP   1. {main}() C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php:0
+[11-Aug-2023 10:45:53 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php on line 19
+[11-Aug-2023 10:45:53 UTC] PHP Warning:  Undefined variable $var in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php on line 19
+[11-Aug-2023 10:45:53 UTC] PHP Stack trace:
+[11-Aug-2023 10:45:53 UTC] PHP   1. {main}() C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php:0
+[11-Aug-2023 10:45:53 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\Users\tomen\OneDrive\Documents\GitHub\PHPCourse\LaGestionDesErreurs\index.php on line 19

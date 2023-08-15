@@ -1,15 +1,14 @@
 <?php
 
-$pdo = require_once './database.php';
+$articleDB = require_once './database/models/articleDB.php';
 $statement = $pdo->prepare('SELECT * from article WHERE id=:id');
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $id = $_GET['id'] ?? '';
 if (!$id) {
     header('Location: /');
 } else {
-    $statement->bindValue(':id', $id);
-    $statement->execute();
-    $article = $statement->fetch();
+
+    $article = $articleDB->fetchOne($id);
 }
 ?>
 

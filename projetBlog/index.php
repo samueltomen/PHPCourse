@@ -1,15 +1,9 @@
 <?php
-// Importation de la connexion à la base de données à partir du fichier 'database.php'
-$pdo = require_once './database.php';
+$articleDB = require_once './database/models/articleDB.php';
 
-// Préparation de la requête SQL pour récupérer tous les articles
-$statement = $pdo->prepare('SELECT * from article');
-
-// Exécution de la requête
-$statement->execute();
 
 // Récupération de tous les articles sous forme de tableau
-$articles = $statement->fetchAll();
+$articles = $articleDB->fetchAll();
 
 // Initialisation d'un tableau pour stocker les catégories
 $categories = [];

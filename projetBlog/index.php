@@ -1,15 +1,31 @@
 <?php
-$filename = __DIR__ . '/data/articles.json';
-$articles = [];
+// Importation de la connexion à la base de données à partir du fichier 'database.php'
+$pdo = require_once './database.php';
+
+// Préparation de la requête SQL pour récupérer tous les articles
+$statement = $pdo->prepare('SELECT * from article');
+
+// Exécution de la requête
+$statement->execute();
+
+// Récupération de tous les articles sous forme de tableau
+$articles = $statement->fetchAll();
+
+// Initialisation d'un tableau pour stocker les catégories
 $categories = [];
 
+// Filtrage et nettoyage de la superglobale $_GET pour des raisons de sécurité
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+// Récupération de la catégorie sélectionnée depuis la requête GET (si présente)
 $selectedCat = $_GET['cat'] ?? '';
 
-
-if (file_exists($filename)) {
-    $articles = json_decode(file_get_contents($filename), true ?? []);
+// Si des articles sont présents dans la base de données
+if (count($articles)) {
+    // Extraction des catégories de chaque article
     $cattmp = array_map(fn ($a) => $a['category'], $articles);
+
+    // Création d'un tableau associatif de catégories avec leur nombre d'occurrences
     $categories = array_reduce($cattmp, function ($acc, $cat) {
         if (isset($acc[$cat])) {
             $acc[$cat]++;
@@ -19,6 +35,7 @@ if (file_exists($filename)) {
         return $acc;
     }, []);
 
+    // Groupement des articles par catégorie
     $articlePerCategories = array_reduce($articles, function ($acc, $article) {
         if (isset($acc[$article['category']])) {
             $acc[$article['category']] = [...$acc[$article['category']], $article];
@@ -30,6 +47,7 @@ if (file_exists($filename)) {
 }
 
 ?>
+
 
 
 <!DOCTYPE html>

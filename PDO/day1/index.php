@@ -1,6 +1,5 @@
 <pre>
     <?php
-
     $dns = 'mysql:host=localhost;dbname=test';
     $usr = 'root';
     $pwd = 'password';

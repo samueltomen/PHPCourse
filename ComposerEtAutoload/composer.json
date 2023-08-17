@@ -1,0 +1,6 @@
+{
+    "name": "tomen/myproject",
+    "require": {
+        "symfony/debug": "^4.4"
+    }
+}

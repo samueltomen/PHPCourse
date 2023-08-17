@@ -8,13 +8,16 @@
 
     // $db = new \database\Database();
 
+    // require './vendor/autoload.php';
+
+    // use Symfony\Component\ErrorHandler\Debug;
+
+    // Debug::enable();
+
+    // $var();
     require './vendor/autoload.php';
 
-    use Symfony\Component\ErrorHandler\Debug;
-
-    Debug::enable();
-
-    $var();
+    $user = new \myproject\database\models\User();
 
     ?>
 </pre>

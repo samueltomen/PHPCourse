@@ -1,3 +1,15 @@
+<?php
+
+require_once __DIR__ . '/isLoggeding.php';
+$currentUser = isLoggedin();
+
+if (!$currentUser) {
+    header('Location: /login.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +29,7 @@
     </nav>
 
     <h1>PROFIL</h1>
+    <h2>Hello <?= $currentUser['username'] ?></h2>
 
 </body>
 

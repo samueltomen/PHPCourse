@@ -18,9 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $user = $statementUser->fetch();
 
         if (password_verify($password, $user['password'])) {
-            echo 'Password correct !';
+            $statementSession = $pdo->prepare('INSERT INTO session VALUES ( DEFAULT, :userid)');
+            $statementSession->bindValue(':userid', $user['id']);
+            $statementSession->execute();
+            $sessionId = $pdo->lastInsertId();
+            setcookie('session', $sessionId, time() + 60 * 60 * 24 * 7, "", "", false, true);
+            header('Location: /profil.php');
+            echo 'Sucess';
         } else {
-            $error= 'Wrong password !';
+            $error = 'Wrong password !';
         }
     }
 }

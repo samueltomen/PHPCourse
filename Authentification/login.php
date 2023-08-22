@@ -45,9 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <nav>
         <a href="/">Home</a>
         <a href="login.php">Login</a>
-        <a href="logout.php">Logout</a>
-        <a href="profil.php">Profil</a>
         <a href="register.php">Register</a>
+
     </nav>
 
     <h1>LOGIN</h1>

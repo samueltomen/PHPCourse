@@ -22,10 +22,8 @@ if (!$currentUser) {
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="login.php">Login</a>
-        <a href="logout.php">Logout</a>
         <a href="profil.php">Profil</a>
-        <a href="register.php">Register</a>
+        <a href="logout.php">Logout</a>
     </nav>
 
     <h1>PROFIL</h1>

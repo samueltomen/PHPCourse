@@ -18,11 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $user = $statementUser->fetch();
 
         if (password_verify($password, $user['password'])) {
-            $statementSession = $pdo->prepare('INSERT INTO session VALUES ( DEFAULT, :userid)');
+            $sessionId = bin2hex(random_bytes(32));
+            $statementSession = $pdo->prepare('INSERT INTO session VALUES ( :sessionid, :userid)');
             $statementSession->bindValue(':userid', $user['id']);
+            $statementSession->bindValue(':sessionid', $sessionId);
             $statementSession->execute();
-            $sessionId = $pdo->lastInsertId();
+            $signature = hash_hmac('sha256', $sessionId, 'quatre petits chats');
             setcookie('session', $sessionId, time() + 60 * 60 * 24 * 7, "", "", false, true);
+            setcookie('signature', $signature, time() + 60 * 60 * 24 * 7, "", "", false, true);
+
             header('Location: /profil.php');
             echo 'Sucess';
         } else {

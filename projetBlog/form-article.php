@@ -1,7 +1,11 @@
 <?php
-
+require_once __DIR__ . '/database/security.php';
+require_once __DIR__ . '/database/database.php';
 $articleDB = require_once './database/models/articleDB.php';
-
+$currentUser = isLoggedIn();
+if (!$currentUser) {
+    header('Location: /auth-login.php');
+}
 // Définition des constantes pour les messages d'erreur
 const ERROR_REQUIRED = "Veuillez renseignez ce champ";
 const ERROR_TITLE_TOO_SHORT = "Le titre est trop court";
@@ -24,6 +28,9 @@ $id = $_GET['id'] ?? '';
 if ($id) {
 
     $article = $articleDB->fetchOne($id);
+    if ($article['author'] !== $currentUser['id']) {
+        header('Location: /');
+    }
     $title = $article['title'];
     $image = $article['image'];
     $category = $article['category'];
@@ -82,13 +89,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $article['image'] = $image;
             $article['category'] = $category;
             $article['content'] = $content;
+            $article['author'] = $currentUser['id'];
             $articleDB->updateOne($article);
         } else {
             $articleDB->createOne([
                 'title' => $title,
                 'content' => $content,
                 'category' => $category,
-                'image' => $image
+                'image' => $image,
+                'author' => $currentUser['id']
             ]);
         }
         header('Location: /');

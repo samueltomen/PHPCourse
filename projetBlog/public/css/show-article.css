@@ -11,6 +11,16 @@
     font-size: 5rem;
     font-weight: 400;
 }
+.article-author {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+.article-author p {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
 .article-content {
     white-space: pre-wrap;
 }

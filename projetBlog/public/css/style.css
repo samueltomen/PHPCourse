@@ -124,6 +124,7 @@ header {
     margin: 0;
     display: flex;
     flex-flow: row;
+    align-items: center;
 }
 
 .header-menu li {
@@ -141,6 +142,20 @@ header {
     font-weight: 700;
     font-size: 2rem;
     color: var(--text-color-light);
+}
+li.header-profile {
+    font-weight: bold;
+    background-color: var(--dark);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+li.header-profile:hover {
+    background-color: var(--dark);
 }
 
 /* Content */

@@ -29,6 +29,18 @@
     background-size: cover;
     transition: transform 0.4s;
 }
+.article-author {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.article-author p {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
 .newsfeed-container {
     display: flex;
     flex-flow: row nowrap;

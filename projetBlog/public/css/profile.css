@@ -1,0 +1,23 @@
+.content {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.info-container ul li {
+    display: flex;
+}
+.info-container ul li strong {
+    margin-right: 0.5rem;
+}
+.articles-list ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    border: var(--border);
+    margin-bottom: 0.5rem;
+}
+
+.articles-list {
+    width: 100%;
+}

@@ -11,7 +11,7 @@ function isLoggedIn()
         $session = $statementSession->fetch();
         if ($session) {
             $statementUser = $pdo->prepare('SELECT * FROM user WHERE id=:id');
-            $statementUser->bindValue('id', $sessionId);
+            $statementUser->bindValue(':id', $session['userid']);
             $statementUser->execute();
             $user = $statementUser->fetch();
         }

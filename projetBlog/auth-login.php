@@ -54,6 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             if (!password_verify($password, $user['password'])) {
                 $errors['password'] = ERROR_PASSWORD;
+            } else {
+                $statementSession = $pdo->prepare('INSERT INTO session VALUES(DEFAULT, :userid)');
+                $statementSession->bindValue(':userid', $user['id']);
+                $statementSession->execute();
+                $sessionId = $pdo->lastInsertId();
+                setcookie('session', $sessionId, time() + 60 * 60 * 24 * 14, '', '', false, true);
+                header('Location: /');
             }
         }
     }

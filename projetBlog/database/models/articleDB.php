@@ -1,7 +1,6 @@
 <?php
 
-// Require et initialiser une connexion à la base de données à partir d'un autre fichier.
-$pdo = require_once __DIR__ . '/../database.php';
+
 
 // Classe définissant les opérations de base de données pour les articles.
 class ArticleDB

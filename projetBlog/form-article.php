@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <?php include_once('./includes/head.php') ?>
-    <link rel="stylesheet" href="./public/css/form-article.css">
+    <!-- <link rel="stylesheet" href="./public/css/form-article.css"> -->
     <title><?php if ($id) {
                 echo 'Modifier un article';
             } else {

@@ -46,6 +46,15 @@
     display: flex;
     flex-flow: row nowrap;
 }
+@media only screen and (max-width: 800px) {
+    .category-container {
+        display: none;
+    }
+    .articles-container {
+        flex-flow: column;
+        align-items: unset;
+    }
+}
 .category-container {
     flex: 20rem;
 }

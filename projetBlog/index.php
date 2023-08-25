@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/database/database.php';
+// require __DIR__ . '/database/database.php';
 $authDB = require __DIR__ . '/database/security.php';
 $currentUser = $authDB->isLoggedIn();
 $articleDB = require_once './database/models/articleDB.php';

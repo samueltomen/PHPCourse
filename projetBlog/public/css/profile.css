@@ -10,6 +10,7 @@
 }
 .articles-list ul li {
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     padding: 1.5rem 1.5rem;
     border-radius: 0.3rem;
@@ -20,4 +21,13 @@
 
 .articles-list {
     width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    .articles-list ul li {
+        flex-flow: column;
+    }
+    .article-actions {
+        margin-top: 1rem;
+    }
 }

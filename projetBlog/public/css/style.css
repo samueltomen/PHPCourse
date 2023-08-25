@@ -157,15 +157,6 @@ header {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 800px) {
-    .header-menu {
-        display: none;
-    }
-    .header-mobile {
-        display: block;
-    }
-}
-
 .header-menu li:hover {
     background-color: var(--primary-dark);
 }
@@ -272,4 +263,20 @@ footer {
 
 .p-10 {
     padding: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .header-menu {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .content {
+        padding: 2rem;
+    }
+    
 }

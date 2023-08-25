@@ -138,12 +138,15 @@ header {
     display: none;
 }
 .header-mobile-list {
+    display: none;
     position: absolute;
     left: 0;
     width: 100%;
     background-color: var(--background-light);
 }
-
+.show {
+    display: block;
+}
 .header-mobile-list li {
     padding: 1rem;
     color: var(--text-color);

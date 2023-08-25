@@ -15,6 +15,7 @@
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+
 }
 .article-author p {
     font-size: 1rem;

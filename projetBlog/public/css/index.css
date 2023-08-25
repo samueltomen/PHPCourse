@@ -34,6 +34,7 @@
     flex-flow: row;
     justify-content: flex-end;
     padding-right: 2rem;
+    padding-bottom: 1rem;
 }
 
 .article-author p {

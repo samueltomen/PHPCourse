@@ -12,5 +12,5 @@ try {
     echo "Connexion réussi";
     return $pdo;
 } catch (PDOException $e) {
-    echo "Une erreur s'est produite :" . $e->getMessage();
+    throw new Exception($e->getMessage());
 }

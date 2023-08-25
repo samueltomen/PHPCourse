@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/database.php';
 class AuthDB
 {
     private PDOStatement $statementRegister;
@@ -48,7 +49,7 @@ class AuthDB
         if ($sessionId && $signature) {
             $hash = hash_hmac('sha256', $sessionId, 'fuck off');
             if (hash_equals($hash, $signature)) {
-                $this->statementReadSession->bindValue('id', $sessionId);
+                $this->statementReadSession->bindValue(':id', $sessionId);
                 $this->statementReadSession->execute();
                 $session = $this->statementReadSession->fetch();
                 if ($session) {
@@ -79,7 +80,3 @@ class AuthDB
 }
 
 return new AuthDB($pdo);
-// function isLoggedIn()
-// {
-//
-// }

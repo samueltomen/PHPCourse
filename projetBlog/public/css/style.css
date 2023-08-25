@@ -114,6 +114,7 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .active {
@@ -132,6 +133,34 @@ header {
     border-radius: 3px;
     padding: 5px 15px;
     transition: background-color 0.3s;
+}
+.header-mobile {
+    display: none;
+}
+.header-mobile-list {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-light);
+}
+
+.header-mobile-list li {
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+.header-mobile-list li.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    .header-menu {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
 }
 
 .header-menu li:hover {

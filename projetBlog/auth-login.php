@@ -1,5 +1,6 @@
 <?php
-$pdo = require_once './database/database.php';
+require_once __DIR__ . '/database/database.php';
+$authDB = require_once './database/security.php';
 
 
 // Définition des constantes pour les messages d'erreur
@@ -44,22 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (empty(array_filter($errors, fn ($e) => $e !== ''))) {
-        $statementUser = $pdo->prepare('SELECT * FROM user WHERE email=:email');
-        $statementUser->bindValue(':email', $email);
-        $statementUser->execute();
-        $user = $statementUser->fetch();
-
+        $user = $authDB->getUserFromEmail($email);
         if (!$user) {
             $errors['email'] = ERROR_UNKNOW_EMAIL;
         } else {
             if (!password_verify($password, $user['password'])) {
                 $errors['password'] = ERROR_PASSWORD;
             } else {
-                $statementSession = $pdo->prepare('INSERT INTO session VALUES(DEFAULT, :userid)');
-                $statementSession->bindValue(':userid', $user['id']);
-                $statementSession->execute();
-                $sessionId = $pdo->lastInsertId();
-                setcookie('session', $sessionId, time() + 60 * 60 * 24 * 14, '', '', false, true);
+                $authDB->login($user['id']);
                 header('Location: /');
             }
         }

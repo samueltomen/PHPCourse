@@ -1,5 +1,6 @@
 <?php
 $pdo = require_once './database/database.php';
+$authDB = require_once __DIR__ . '/database/security.php';
 
 
 // Définition des constantes pour les messages d'erreur
@@ -65,14 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (empty(array_filter($errors, fn ($e) => $e !== ''))) {
-        $statement = $pdo->prepare('INSERT INTO user VALUES(DEFAULT,:firstname,:lastname,:email,:password)');
-        $hashedPassword = password_hash($password, PASSWORD_ARGON2I);
-        $statement->bindValue(':firstname', $firstname);
-        $statement->bindValue(':lastname', $lastname);
-        $statement->bindValue(':email', $email);
-        $statement->bindValue(':password', $hashedPassword);
-        $statement->execute();
-
+        $authDB->register([
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'email' => $email,
+            'password' => $password
+        ]);
         header('Location: /');
     }
 
